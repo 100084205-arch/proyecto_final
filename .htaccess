@@ -1,0 +1,14 @@
+ php_value upload_max_filesize 200m
+php_value max_execution_time 3600
+php_value post_max_size  180M
+php_value max_input_time 90
+ php_flag short_open_tag on
+
+
+Options All -Indexes
+Options -MultiViews
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]
